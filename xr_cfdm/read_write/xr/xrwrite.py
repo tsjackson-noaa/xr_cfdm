@@ -7,6 +7,7 @@ import os
 
 import netCDF4
 import cfdm
+import cf
 
 class XRWriteBase(cfdm.read_write.netcdf.NetCDFWrite):
     """Overwrite the subset of methods in cfdm NetCDFWrite which call methods in
@@ -77,3 +78,7 @@ class XRWriteBase(cfdm.read_write.netcdf.NetCDFWrite):
             raise RuntimeError("{}: {}".format(error, filename))
 
         return nc
+
+
+class XRWrite(XRWriteBase, cf.read_write.netcdf.NetCDFWrite):
+    pass
