@@ -1,0 +1,28 @@
+# Conda environment for development work.
+name: xr_cfdm_dev
+channels:
+- conda-forge
+- defaults
+dependencies:
+# versions as of may 2021
+- python=3.7
+- numpy=1.20.2
+- netCDF4=1.5.6
+- cftime=1.4.1
+- cfunits=3.3.1
+- cfdm=1.8.8
+- xarray=0.18
+# following shouldn't be dependencies, but bring them in in case they're needed for reference
+- scipy=1.6.3
+- matplotlib=3.4.2
+- dask=2021.5
+- intake=0.6.2
+- intake-esm=2021.1.15
+- cf_xarray=0.5.2
+- cf-python=3.8.0
+# additional development tools
+- jupyter=1.0
+- jupyterlab=3.0.15
+- pylint=2.7
+- graphviz=2.47
+- pydot=1.4.2
