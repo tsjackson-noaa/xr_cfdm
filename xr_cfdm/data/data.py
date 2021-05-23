@@ -9,8 +9,9 @@ import numpy as np
 import cfdm
 import cf
 
-from cf.constants import masked as cf_masked
+from ..cf_python.constants import masked as cf_masked
 from cf.data.data import (
+    # module-level functions/constants from cf-python
     _array_getattr,
     _convert_to_builtin_type,
     _initialise_axes,
@@ -21,22 +22,22 @@ from cf.data.data import (
     _month_length
 )
 from cf.data.filledarray import FilledArray
-from cf.cfdatetime import dt2rt, rt2dt, st2rt
-from cf.cfdatetime import dt as cf_dt
-from cf.decorators import (
+from ..cf_python.cfdatetime import dt2rt, rt2dt, st2rt
+from ..cf_python.cfdatetime import dt as cf_dt
+from ..cf_python.decorators import (
     _inplace_enabled,
     _inplace_enabled_define_and_cleanup,
     _deprecated_kwarg_check,
     _manage_log_level_via_verbosity,
     _display_or_return,
 )
-from cf.functions import (
+from ..cf_python.functions import (
     parse_indices,
     pathjoin,
     hash_array,
 )
-from cf.functions import inspect as cf_inspect
-from cf.units import Units
+from ..cf_python.functions import inspect as cf_inspect
+from ..units import Units
 from . import XRArray
 
 import logging

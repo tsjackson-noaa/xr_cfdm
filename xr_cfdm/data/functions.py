@@ -2,8 +2,8 @@ from os.path import isfile
 
 from netCDF4 import Dataset as netCDF4_Dataset
 
-from cf.constants import _file_to_fh
-from cf.functions import open_files_threshold_exceeded, close_one_file
+from ..cf_python.constants import _file_to_fh
+from ..cf_python.functions import open_files_threshold_exceeded, close_one_file
 
 import logging
 logger = logging.getLogger(__name__)
