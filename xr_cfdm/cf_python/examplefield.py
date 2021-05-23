@@ -1,6 +1,6 @@
 import cfdm
 
-from .cfimplementation import implementation
+from ..implementation import implementation
 
 
 _implementation = implementation()

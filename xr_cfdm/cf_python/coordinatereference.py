@@ -10,7 +10,7 @@ from .query import Query
 from . import CoordinateConversion
 from . import Datum
 
-from .data.data import Data
+from ..data import Data
 
 from .functions import _DEPRECATION_ERROR_METHOD, _DEPRECATION_ERROR_ATTRIBUTE
 

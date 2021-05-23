@@ -1,4 +1,4 @@
-from . import mixin
+from .. import mixin
 
 
 class SubspaceField(mixin.Subspace):

@@ -3,7 +3,7 @@ from numpy import empty as numpy_empty
 from numpy import where as numpy_where
 from numpy import sum as numpy_sum
 from numpy import finfo as numpy_finfo
-from .data.data import Data
+from ..data import Data
 from .dimensioncoordinate import DimensionCoordinate
 from .functions import regrid_logging
 from . import _found_ESMF

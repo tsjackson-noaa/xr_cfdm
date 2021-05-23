@@ -1,6 +1,6 @@
 import cfdm
 
-from . import mixin
+from .. import mixin
 
 
 class Count(mixin.PropertiesData, cfdm.Count):

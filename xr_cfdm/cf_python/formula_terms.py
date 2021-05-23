@@ -2,7 +2,7 @@ import logging
 
 import cfdm
 
-from .units import Units
+from ..units import Units
 
 from .functions import bounds_combination_mode
 
@@ -14,7 +14,7 @@ from .constants import (
     formula_terms_D1,
 )
 
-from .docstring import _docstring_substitution_definitions
+from cf.docstring import _docstring_substitution_definitions
 
 logger = logging.getLogger(__name__)
 

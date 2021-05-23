@@ -5,9 +5,9 @@ from operator import __or__ as operator_or
 
 from .functions import equals as _equals
 from .functions import inspect as _inspect
-from .units import Units
+from ..units import Units
 
-from .data import Data
+from ..data import Data
 
 from .functions import (
     _DEPRECATION_ERROR_FUNCTION_KWARGS,

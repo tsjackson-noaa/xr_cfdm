@@ -9,9 +9,9 @@ import numpy
 from .cfdatetime import elements
 from .cfdatetime import dt as cf_dt
 from .functions import inspect as cf_inspect
-from .units import Units
+from ..units import Units
 
-from .data.data import Data
+from ..data import Data
 
 from .decorators import (
     _deprecated_kwarg_check,

@@ -14,7 +14,7 @@ from . import mpi_size
 if mpi_on:
     from . import mpi_comm
 
-from .units import Units
+from ..units import Units
 
 
 # platform = sys.platform
