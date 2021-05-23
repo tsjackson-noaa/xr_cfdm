@@ -5,6 +5,9 @@ from netCDF4 import Dataset as netCDF4_Dataset
 from cf.constants import _file_to_fh
 from cf.functions import open_files_threshold_exceeded, close_one_file
 
+import logging
+logger = logging.getLogger(__name__)
+
 
 _file_to_Dataset = _file_to_fh.setdefault("netCDF", {})
 

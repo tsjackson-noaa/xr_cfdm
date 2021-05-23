@@ -9,6 +9,9 @@ import netCDF4
 import cfdm
 import cf
 
+import logging
+logger = logging.getLogger(__name__)
+
 class XRWriteBase(cfdm.read_write.netcdf.NetCDFWrite):
     """Overwrite the subset of methods in cfdm NetCDFWrite which call methods in
     netCDF4, replacing them with xarray methods.

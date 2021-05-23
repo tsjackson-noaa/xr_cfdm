@@ -4,6 +4,9 @@ import netCDF4
 
 from .functions import _open_netcdf_file, _close_netcdf_file
 
+import logging
+logger = logging.getLogger(__name__)
+
 class XRArrayBase(cfdm.data.NetCDFArray):
     def __getitem__(self, indices):
         """Returns a subspace of the array as a numpy array.

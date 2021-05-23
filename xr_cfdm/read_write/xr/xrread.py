@@ -6,18 +6,13 @@ XRRead is based on cf-python's ``cf.read_write.netcdf.NetCDFRead``.
 
 import ast
 import json
-import logging
-import operator
 import os
 import re
-import struct
-import subprocess
 import tempfile
 
 from collections import OrderedDict
 from copy import deepcopy
 from distutils.version import LooseVersion
-from functools import reduce
 
 import numpy
 import netCDF4
@@ -29,9 +24,8 @@ from cf.constants import _file_to_fh
 from cf.functions import pathjoin, dirname
 from cf.units import Units
 
+import logging
 logger = logging.getLogger(__name__)
-
-_cached_temporary_files = {}
 
 _flattener_separator = netcdf_flattener._Flattener._Flattener__new_separator
 

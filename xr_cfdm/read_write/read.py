@@ -1,4 +1,3 @@
-import logging
 import os
 
 from glob import glob
@@ -6,25 +5,14 @@ from os.path import isdir
 
 from numpy.ma.core import MaskError
 
-from ..cfimplementation import implementation
-from ..fieldlist import FieldList
+from ..implementation import implementation
+from cf.fieldlist import FieldList
 from ..aggregate import aggregate as cf_aggregate
-from ..decorators import _manage_log_level_via_verbosity
-from ..query import Query
-from ..functions import flat, _DEPRECATION_ERROR_FUNCTION_KWARGS
+from cf.decorators import _manage_log_level_via_verbosity
+from cf.query import Query
+from cf.functions import flat, _DEPRECATION_ERROR_FUNCTION_KWARGS
 
-from .netcdf import NetCDFRead
-from .um import UMRead
-
-# TODO - replace the try block with "from re import Pattern" when
-#        Python 3.6 is deprecated
-try:
-    from re import Pattern
-except ImportError:  # pragma: no cover
-    python36 = True  # pragma: no cover
-else:
-    python36 = False
-
+from .xr import XRRead
 
 # --------------------------------------------------------------------
 # Create an implementation container and initialize a read object for
@@ -34,7 +22,7 @@ _implementation = implementation()
 netcdf = NetCDFRead(_implementation)
 UM = UMRead(_implementation)
 
-
+import logging
 logger = logging.getLogger(__name__)
 
 
