@@ -2,7 +2,7 @@ import cfdm
 
 from . import Bounds
 
-from .. import mixin
+from . import mixin
 
 
 class AuxiliaryCoordinate(

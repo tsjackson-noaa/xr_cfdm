@@ -1,6 +1,6 @@
 import cfdm
 
-from .. import mixin
+from . import mixin
 
 
 class FieldAncillary(mixin.PropertiesData, cfdm.FieldAncillary):

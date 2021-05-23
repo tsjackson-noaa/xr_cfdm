@@ -9,17 +9,17 @@ try:
 except ImportError:
     pass
 
-from ..cf_python.query import Query
-from ..data import Data
-from ..units import Units
+from ..query import Query
+from ...data import Data
+from ...units import Units
 
-from ..cf_python.functions import (
+from ..functions import (
     parse_indices,
     bounds_combination_mode,
     _DEPRECATION_ERROR_KWARGS,
 )
 
-from ..cf_python.decorators import (
+from ..decorators import (
     _inplace_enabled,
     _inplace_enabled_define_and_cleanup,
     _manage_log_level_via_verbosity,

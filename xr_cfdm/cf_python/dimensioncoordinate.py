@@ -10,7 +10,7 @@ from ..units import Units
 
 from ..data import Data
 
-from .. import mixin
+from . import mixin
 
 from .functions import _DEPRECATION_ERROR_KWARGS, _DEPRECATION_ERROR_ATTRIBUTE
 

@@ -3,7 +3,7 @@ import cfdm
 from ..data import Data
 from ..units import Units
 
-from .. import mixin
+from . import mixin
 
 from .decorators import _deprecated_kwarg_check
 
