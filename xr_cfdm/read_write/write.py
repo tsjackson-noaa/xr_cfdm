@@ -6,10 +6,10 @@ from .xr import XRWrite
 
 from ..implementation import implementation
 
-from cf.decorators import _manage_log_level_via_verbosity
+from ..cf_python.decorators import _manage_log_level_via_verbosity
 
-from cf.functions import flat
-from cf.functions import _DEPRECATION_ERROR_FUNCTION_KWARGS
+from ..cf_python.functions import flat
+from ..cf_python.functions import _DEPRECATION_ERROR_FUNCTION_KWARGS
 
 
 import logging

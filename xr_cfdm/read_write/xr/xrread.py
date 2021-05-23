@@ -20,9 +20,9 @@ import cfdm
 from cfdm.functions import is_log_level_debug
 import netcdf_flattener
 
-from cf.constants import _file_to_fh
-from cf.functions import pathjoin, dirname
-from cf.units import Units
+from ...cf_python.constants import _file_to_fh
+from ...cf_python.functions import pathjoin, dirname
+from ...units import Units
 
 import logging
 logger = logging.getLogger(__name__)

@@ -6,11 +6,11 @@ from os.path import isdir
 from numpy.ma.core import MaskError
 
 from ..implementation import implementation
-from cf.fieldlist import FieldList
+from ..cf_python.fieldlist import FieldList
 from ..aggregate import aggregate as cf_aggregate
-from cf.decorators import _manage_log_level_via_verbosity
-from cf.query import Query
-from cf.functions import flat, _DEPRECATION_ERROR_FUNCTION_KWARGS
+from ..cf_python.decorators import _manage_log_level_via_verbosity
+from ..cf_python.query import Query
+from ..cf_python.functions import flat, _DEPRECATION_ERROR_FUNCTION_KWARGS
 
 from .xr import XRRead
 
