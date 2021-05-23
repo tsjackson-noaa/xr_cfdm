@@ -7,8 +7,30 @@ This is cfdm's main supported extensbility mechanism; see
 import cfdm
 import cf
 
-from .field import XRField
 from . import data
+from .field import XRField
+from .cf_python import (
+    AuxiliaryCoordinate,
+    CellMethod,
+    CellMeasure,
+    CoordinateReference,
+    DimensionCoordinate,
+    DomainAncillary,
+    DomainAxis,
+    FieldAncillary,
+    Bounds,
+    InteriorRing,
+    CoordinateConversion,
+    Datum,
+    Count,
+    List,
+    Index,
+    NodeCountProperties,
+    PartNodeCountProperties,
+)
+
+import logging
+logger = logging.getLogger(__name__)
 
 class CFImplementation(cfdm.CFDMImplementation):
     pass
@@ -16,34 +38,34 @@ class CFImplementation(cfdm.CFDMImplementation):
 _implementation = CFImplementation(
     # our modifications
     Field=XRField,
-    Data=data.XRData,
+    Data=data.Data,
     NetCDFArray=data.XRArray,
 
     # reminder carried over from cf-python
     cf_version=cf.CF(),
 
     # parts of Field (via composition)
-    AuxiliaryCoordinate=cf.AuxiliaryCoordinate,
-    CellMeasure=cf.CellMeasure,
-    CellMethod=cf.CellMethod,
-    CoordinateReference=cf.CoordinateReference,
-    DimensionCoordinate=cf.DimensionCoordinate,
-    DomainAncillary=cf.DomainAncillary,
-    DomainAxis=cf.DomainAxis,
-    FieldAncillary=cf.FieldAncillary,
+    AuxiliaryCoordinate=AuxiliaryCoordinate,
+    CellMeasure=CellMeasure,
+    CellMethod=CellMethod,
+    CoordinateReference=CoordinateReference,
+    DimensionCoordinate=DimensionCoordinate,
+    DomainAncillary=DomainAncillary,
+    DomainAxis=DomainAxis,
+    FieldAncillary=FieldAncillary,
 
     # geometry
-    Bounds=cf.Bounds,
-    InteriorRing=cf.InteriorRing,
-    CoordinateConversion=cf.CoordinateConversion,
-    Datum=cf.Datum,
+    Bounds=Bounds,
+    InteriorRing=InteriorRing,
+    CoordinateConversion=CoordinateConversion,
+    Datum=Datum,
 
     # discrete sampling geometry
-    List=cf.List,
-    Index=cf.Index,
-    Count=cf.Count,
-    NodeCountProperties=cf.NodeCountProperties,
-    PartNodeCountProperties=cf.PartNodeCountProperties,
+    List=List,
+    Index=Index,
+    Count=Count,
+    NodeCountProperties=NodeCountProperties,
+    PartNodeCountProperties=PartNodeCountProperties,
 
     # other data containers
     GatheredArray=cf.GatheredArray,
