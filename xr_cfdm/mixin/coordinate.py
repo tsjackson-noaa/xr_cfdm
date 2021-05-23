@@ -1,13 +1,13 @@
 # from itertools import chain
 
-from ..decorators import (
+from ..cf_python.decorators import (
     _inplace_enabled,
     _inplace_enabled_define_and_cleanup,
     _deprecated_kwarg_check,
 )
 
 from ..units import Units
-from ..data.data import Data
+from ..data import Data
 
 
 _units_degrees = Units("degrees")

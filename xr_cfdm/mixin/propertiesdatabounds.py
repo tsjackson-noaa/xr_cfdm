@@ -4,26 +4,26 @@ import numpy as np
 
 from . import PropertiesData
 
-from ..functions import (
+from ..cf_python.functions import (
     bounds_combination_mode,
     parse_indices,
     _DEPRECATION_ERROR_METHOD,
     _DEPRECATION_ERROR_ATTRIBUTE,
 )
-from ..functions import equivalent as cf_equivalent
-from ..functions import inspect as cf_inspect
+from ..cf_python.functions import equivalent as cf_equivalent
+from ..cf_python.functions import inspect as cf_inspect
 
-from ..decorators import (
+from ..cf_python.decorators import (
     _inplace_enabled,
     _inplace_enabled_define_and_cleanup,
     _deprecated_kwarg_check,
     _manage_log_level_via_verbosity,
 )
 
-from ..query import Query
+from ..cf_python.query import Query
 from ..units import Units
 
-from ..data.data import Data
+from ..data import Data
 
 
 _units_None = Units()
