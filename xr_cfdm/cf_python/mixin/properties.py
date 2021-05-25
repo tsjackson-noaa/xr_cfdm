@@ -5,7 +5,7 @@ from ..functions import atol as cf_atol, rtol as cf_rtol
 from ..query import Query
 from ...units import Units
 
-from ...data import Data
+from ...data.data import Data
 
 from ..functions import (
     _DEPRECATION_ERROR_DICT,

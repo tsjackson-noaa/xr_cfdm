@@ -5,7 +5,6 @@ This is cfdm's main supported extensbility mechanism; see
 `<https://ncas-cms.github.io/cfdm/extensions.html>`__.
 """
 import cfdm
-import cf
 
 from . import data
 from .field import XRField
@@ -27,7 +26,12 @@ from .cf_python import (
     Index,
     NodeCountProperties,
     PartNodeCountProperties,
+    GatheredArray,
+    RaggedContiguousArray,
+    RaggedIndexedArray,
+    RaggedIndexedContiguousArray,
 )
+from .cf_python.functions import CF
 
 import logging
 logger = logging.getLogger(__name__)
@@ -42,7 +46,7 @@ _implementation = CFImplementation(
     NetCDFArray=data.XRArray,
 
     # reminder carried over from cf-python
-    cf_version=cf.CF(),
+    cf_version=CF(),
 
     # parts of Field (via composition)
     AuxiliaryCoordinate=AuxiliaryCoordinate,
@@ -68,10 +72,10 @@ _implementation = CFImplementation(
     PartNodeCountProperties=PartNodeCountProperties,
 
     # other data containers
-    GatheredArray=cf.GatheredArray,
-    RaggedContiguousArray=cf.RaggedContiguousArray,
-    RaggedIndexedArray=cf.RaggedIndexedArray,
-    RaggedIndexedContiguousArray=cf.RaggedIndexedContiguousArray,
+    GatheredArray=GatheredArray,
+    RaggedContiguousArray=RaggedContiguousArray,
+    RaggedIndexedArray=RaggedIndexedArray,
+    RaggedIndexedContiguousArray=RaggedIndexedContiguousArray,
 )
 
 def implementation():

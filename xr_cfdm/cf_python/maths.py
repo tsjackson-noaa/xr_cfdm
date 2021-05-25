@@ -1,7 +1,7 @@
 from .functions import _DEPRECATION_ERROR_FUNCTION_KWARGS
 from ..units import Units
 
-from ..data import Data
+from ..data.data import Data
 
 
 def relative_vorticity(

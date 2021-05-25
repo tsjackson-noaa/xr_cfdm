@@ -6,7 +6,7 @@ import logging
 
 import cfdm
 
-from ..data import Data
+from ..data.data import Data
 
 from .functions import inspect as cf_inspect
 

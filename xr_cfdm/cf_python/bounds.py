@@ -1,6 +1,6 @@
 import cfdm
 
-from ..data import Data
+from ..data.data import Data
 from ..units import Units
 
 from . import mixin

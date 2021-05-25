@@ -8,7 +8,7 @@ from . import Bounds
 from .timeduration import TimeDuration
 from ..units import Units
 
-from ..data import Data
+from ..data.data import Data
 
 from . import mixin
 

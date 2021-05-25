@@ -33,7 +33,7 @@ from .cf_python.functions import (
 )
 from .cf_python.functions import rtol as cf_rtol, atol as cf_atol
 
-from .data import Data
+from .data.data import Data
 
 
 logger = logging.getLogger(__name__)

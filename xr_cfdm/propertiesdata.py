@@ -7,23 +7,23 @@ from numpy import array as numpy_array
 from numpy import result_type as numpy_result_type
 from numpy import vectorize as numpy_vectorize
 
-from ..cf_python.cfdatetime import dt
-from ..cf_python.functions import equivalent as cf_equivalent
-from ..cf_python.functions import inspect as cf_inspect
-from ..cf_python.functions import default_netCDF_fillvals
-from ..cf_python.timeduration import TimeDuration
-from ..units import Units
+from .cf_python.cfdatetime import dt
+from .cf_python.functions import equivalent as cf_equivalent
+from .cf_python.functions import inspect as cf_inspect
+from .cf_python.functions import default_netCDF_fillvals
+from .cf_python.timeduration import TimeDuration
+from .units import Units
 
-from ..data import Data
+from .data.data import Data
 
 from . import Properties
 
-from ..cf_python.functions import (
+from .cf_python.functions import (
     _DEPRECATION_ERROR_METHOD,
     _DEPRECATION_ERROR_ATTRIBUTE,
 )
 
-from ..cf_python.decorators import (
+from .cf_python.decorators import (
     _inplace_enabled,
     _inplace_enabled_define_and_cleanup,
     _deprecated_kwarg_check,

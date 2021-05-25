@@ -10,7 +10,7 @@ except ImportError:
     pass
 
 from ..query import Query
-from ...data import Data
+from ...data.data import Data
 from ...units import Units
 
 from ..functions import (

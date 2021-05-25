@@ -7,6 +7,7 @@ _requires = (
     "cftime",
     "cfunits",
     "cfdm",
+    "psutil",
 )
 
 x = ", ".join(_requires)
@@ -58,6 +59,19 @@ try:
     import cfunits
 except ImportError as error1:
     raise ImportError(_error0 + str(error1))
+
+try:
+    import psutil
+except ImportError as error1:
+    raise ImportError(_error0 + str(error1))
+
+# Check the version of psutil
+_minimum_vn = "0.6.0"
+if LooseVersion(psutil.__version__) < LooseVersion(_minimum_vn):
+    raise RuntimeError(
+        f"Bad psutil version: cf requires psutil>={_minimum_vn}. "
+        f"Got {psutil.__version__} at {psutil.__file__}"
+    )
 
 # Check the version of netCDF4
 _minimum_vn = "1.5.4"

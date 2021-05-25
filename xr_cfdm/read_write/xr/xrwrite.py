@@ -7,7 +7,6 @@ import os
 
 import netCDF4
 import cfdm
-import cf
 
 import logging
 logger = logging.getLogger(__name__)

@@ -7,8 +7,8 @@ from json import loads as json_loads
 
 import numpy as np
 import cfdm
-import cf
 
+from ..cf_python.mixin_container import Container
 from ..cf_python.constants import masked as cf_masked
 from .data_aux import (
     # module-level functions/constants from cf-python
@@ -52,7 +52,7 @@ _mask_fpe = [False]
 _empty_set = set()
 _units_None = Units()
 
-class Data(cf.mixin_container.Container, cfdm.Data):
+class Data(Container, cfdm.Data):
     """
     """
     def __init__(

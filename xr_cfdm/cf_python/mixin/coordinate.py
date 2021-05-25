@@ -7,7 +7,7 @@ from ..decorators import (
 )
 
 from ...units import Units
-from ...data import Data
+from ...data.data import Data
 
 
 _units_degrees = Units("degrees")

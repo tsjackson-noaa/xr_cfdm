@@ -12,9 +12,9 @@ dependencies:
 - cfunits=3.3.1
 - cfdm=1.8.8
 - xarray=0.18
-- cf-python=3.8.0
 - pint=0.17
 - pint-xarray=0.2
+- psutil>=0.6.0
 # following shouldn't be dependencies, but bring them in in case they're needed for reference
 - scipy=1.6.3
 - matplotlib=3.4.2
@@ -22,6 +22,7 @@ dependencies:
 - intake=0.6.2
 - intake-esm=2021.1.15
 - cf_xarray=0.5.2
+- cf-python=3.8.0
 # additional development tools
 - jupyter=1.0
 - jupyterlab=3.0.15
