@@ -61,7 +61,7 @@ from .constants import (
     OperandBoundsCombination,
 )
 
-from cf.docstring import _docstring_substitution_definitions
+from .docstring import _docstring_substitution_definitions
 
 from . import mpi_size
 

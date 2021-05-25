@@ -16,7 +16,11 @@ __date__ = "2021-05-23"
 mpi_on = False
 mpi_size = 1
 
-from cf.data import (
+from .data import (
+    # our additions
+    Data,
+    XRArray,
+    # unchanged from cf-python
     FilledArray,
     GatheredArray,
     RaggedContiguousArray,

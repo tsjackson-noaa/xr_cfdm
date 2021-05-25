@@ -14,7 +14,7 @@ from .constants import (
     formula_terms_D1,
 )
 
-from cf.docstring import _docstring_substitution_definitions
+from .docstring import _docstring_substitution_definitions
 
 logger = logging.getLogger(__name__)
 

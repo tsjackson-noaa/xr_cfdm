@@ -10,7 +10,7 @@ import cfdm
 import cf
 
 from ..cf_python.constants import masked as cf_masked
-from cf.data.data import (
+from .data_aux import (
     # module-level functions/constants from cf-python
     _array_getattr,
     _convert_to_builtin_type,
@@ -21,7 +21,7 @@ from cf.data.data import (
     _year_length,
     _month_length
 )
-from cf.data.filledarray import FilledArray
+from ..cf_python.data.filledarray import FilledArray
 from ..cf_python.cfdatetime import dt2rt, rt2dt, st2rt
 from ..cf_python.cfdatetime import dt as cf_dt
 from ..cf_python.decorators import (
