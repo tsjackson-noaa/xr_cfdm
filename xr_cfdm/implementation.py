@@ -6,8 +6,9 @@ This is cfdm's main supported extensbility mechanism; see
 """
 import cfdm
 
-from . import data
-from .field import XRField
+from .data.data import Data
+from .data.xr_array import XRArray
+from .field import Field
 from .cf_python import (
     AuxiliaryCoordinate,
     CellMethod,
@@ -41,9 +42,9 @@ class CFImplementation(cfdm.CFDMImplementation):
 
 _implementation = CFImplementation(
     # our modifications
-    Field=XRField,
-    Data=data.Data,
-    NetCDFArray=data.XRArray,
+    Field=Field,
+    Data=Data,
+    NetCDFArray=XRArray,
 
     # reminder carried over from cf-python
     cf_version=CF(),
